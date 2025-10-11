@@ -1,11 +1,14 @@
 import React from 'react';
+import { FaStarHalfAlt } from "react-icons/fa";
+import { Link } from 'react-router';
 
 const Book = ({singleBook}) => {
-    console.log(singleBook)
+    // console.log(singleBook)
 
-    const {bookName,author,image,tags,category,rating} = singleBook;
+    const {bookName,author,image,tags,category,rating,bookId} = singleBook;
     return (
-        <div className="card bg-base-100 w-[360px] shadow-sm mx-auto mt-8">
+        <Link to={`/${bookId}`}>
+          <div className="card bg-base-100 w-[360px] shadow-sm mx-auto mt-8">
   <figure className='bg-red-50 rounded-lg m-3 p-2'>
     <img
     className='h-[175px] p-2 drop-shadow-sm bg-gray-50 rounded-lg'
@@ -25,10 +28,11 @@ const Book = ({singleBook}) => {
     <h4 className='border-b-2 border-dashed pb-1 border-red-50'>By: {author}</h4>
     <div className="card-actions justify-between">
       <div className="text-sm">{category}</div>
-      <div className="text-sm">{rating}</div>
+      <div className="text-sm flex gap-1">{rating} <FaStarHalfAlt></FaStarHalfAlt></div>
     </div>
   </div>
 </div>
+        </Link>
     );
 };
 
