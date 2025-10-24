@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { addToStoredDB } from '../../utility/addToDB';
 
+
 const BookDetails = () => {
     const bookId = useParams();
     const id = bookId.bookId;
@@ -17,7 +18,7 @@ const BookDetails = () => {
         //  if book already exist the show a alert
         //  if book not exist then push in the collection or array
         addToStoredDB(id);
-    }
+    };
 
     return (
         <div className='grid grid-cols-2 gap-8 mb-8'>

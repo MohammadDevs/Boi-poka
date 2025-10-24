@@ -5,7 +5,7 @@ const Navbar = () => {
     const links = <>
       <Link to={'/'}><li className='m-2 btn bg-transparent border-green-500 rounded-lg text-green-500 hover:bg-green-500 hover:text-white'>Home</li></Link>
       <Link to={'/PageRead'}><li className='m-2 btn bg-transparent border-green-500 rounded-lg text-green-500 hover:bg-green-500 hover:text-white'>Pages to Read</li></Link>
-      <Link><li className='m-2 btn bg-transparent border-green-500 rounded-lg text-green-500 hover:bg-green-500 hover:text-white'>Listed Books</li></Link>
+      <Link to={'listedBook'}><li className='m-2 btn bg-transparent border-green-500 rounded-lg text-green-500 hover:bg-green-500 hover:text-white'>Listed Books</li></Link>
     </>
     return (
         <div className="navbar bg-base-100 md:px-0">

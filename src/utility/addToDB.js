@@ -1,3 +1,4 @@
+
 const getStoredBook = () => {
     const storedBookSTR = localStorage.getItem("readList");
 
@@ -14,7 +15,7 @@ const addToStoredDB = (id) => {
 
     const storedBookData = getStoredBook();
     if(storedBookData.includes(id)) {
-        alert("Kela hobe to")
+        alert("Book added")
     }
     else{
         storedBookData.push(id);
@@ -22,5 +23,5 @@ const addToStoredDB = (id) => {
         localStorage.setItem("readList",data);
     }
     
-}
-export {addToStoredDB};
+};
+export {addToStoredDB,getStoredBook};
